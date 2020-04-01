@@ -10,7 +10,9 @@ namespace 计算器5._0
     {
         static void Main(string[] args)
         {
+            //创建一个具体的工厂对象：加法工厂对象
             IFactory addFactory = new AddFactory();
+            //使用加法工厂对象创建加法运算类
             Operation addOper = addFactory.CreateOperation();
 
             addOper.NumA = 2;
