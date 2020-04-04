@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="_02单例模式_单一窗口.FormParent">
+    <Position X="0.5" Y="1.25" Width="4" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="menuStrip1" Hidden="true" />
+      <Field Name="toolBoxToolStripMenuItem" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAIgAACAAAACAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>FormParent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_02单例模式_单一窗口.FormToolBox">
+    <Position X="5.5" Y="1.25" Width="2.75" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACBAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>FormToolBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>
