@@ -21,7 +21,10 @@ namespace _03单例模式_读取配置文件
         //构造函数私有化
         private AppConfig()
         {
-
+            Server = ConfigurationManager.AppSettings["server"];
+            DataBase = ConfigurationManager.AppSettings["databaser"];
+            UserId = ConfigurationManager.AppSettings["uid"];
+            PassWord = ConfigurationManager.AppSettings["pwd"];
         }
 
         //获取唯一实例
@@ -29,13 +32,7 @@ namespace _03单例模式_读取配置文件
         {
             if (appConfig == null)
             {
-                appConfig = new AppConfig()
-                {
-                    Server = ConfigurationManager.AppSettings["server"],
-                    DataBase = ConfigurationManager.AppSettings["databaser"],
-                    UserId = ConfigurationManager.AppSettings["uid"],
-                    PassWord = ConfigurationManager.AppSettings["pwd"]
-                };
+                appConfig = new AppConfig();
             }
             return appConfig;
         }
