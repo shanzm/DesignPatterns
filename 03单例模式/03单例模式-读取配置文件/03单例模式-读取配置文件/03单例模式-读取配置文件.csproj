@@ -45,6 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfig.cs" />
+    <Compile Include="AppConfigExtend.cs" />
+    <Compile Include="AppConfigInnerClass.cs" />
+    <Compile Include="AppConfigStatic.cs" />
+    <Compile Include="AppConfigWithLock.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -24,7 +24,7 @@ namespace _03单例模式_读取配置文件
         private AppConfig2()
         {
             Server = ConfigurationManager.AppSettings["server"];
-            DataBase = ConfigurationManager.AppSettings["databaser"];
+            DataBase = ConfigurationManager.AppSettings["database"];
             UserId = ConfigurationManager.AppSettings["uid"];
             PassWord = ConfigurationManager.AppSettings["pwd"];
         }

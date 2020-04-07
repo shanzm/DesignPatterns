@@ -13,10 +13,17 @@ namespace _03单例模式_读取配置文件
         static void Main(string[] args)
         {
             //单线程创建单例对象
-            CreateAppConfig();
+            //CreateAppConfig();
             //多线程创建单例对象
             //CreateAppConfig2();
+            //对创建对象操作加锁
             //AsyncCreateAppConfigWithLock();
+            //饿汉式
+            //CreateAppConfigStatic();
+            //内部静态类
+            //CreateAppConfigInnerClass();
+            //单例模式扩展
+            CreateAppConfigExtend();
         }
 
         //单线程
@@ -73,8 +80,34 @@ namespace _03单例模式_读取配置文件
             Action createB = () => appConfig2 = AppConfig2.GetInstance();
             Parallel.Invoke(createA, createB);
 
-            Console.WriteLine(object.ReferenceEquals(appConfig1, appConfig2));
+            Console.WriteLine(object.ReferenceEquals(appConfig1, appConfig2));//print:true,即并存创建单例对象AppConfig，依旧是同一个
 
+            Console.ReadKey();
+        }
+
+        //静态内部类
+        private static void CreateAppConfigInnerClass()
+        {
+            AppConfigInnerClass appConfig1 = AppConfigInnerClass.GetInstance();
+            string connectionString = $"server={appConfig1.Server},database={appConfig1.DataBase},uid ={appConfig1.UserId},pwd ={appConfig1.PassWord}";
+            Console.WriteLine(connectionString);
+
+            AppConfigInnerClass appConfig2 = AppConfigInnerClass.GetInstance();
+
+            Console.WriteLine(object.ReferenceEquals(appConfig1, appConfig2));//print:true。即系统中的appConfig对象是同一个
+
+            Console.ReadKey();
+        }
+
+        //单例模式扩展
+        private static void CreateAppConfigExtend()
+        {
+            HashSet<AppConfigExtend> hashset = new HashSet<AppConfigExtend>();
+            for (int i = 0; i < 10; i++)
+            {
+                hashset.Add(AppConfigExtend.GetInstance());
+            }
+            Console.WriteLine(hashset.Count());//print:3 即全局中AppConfigExtend就只有3个实例对象
             Console.ReadKey();
         }
     }
