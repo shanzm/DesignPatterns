@@ -22,11 +22,11 @@ namespace _03单例模式_读取配置文件
         //单线程
         private static void CreateAppConfig()
         {
-            AppConfigStatic appConfig1 = AppConfigStatic.GetInstance();
+            AppConfig appConfig1 = AppConfig.GetInstance();
             string connectionString = $"server={appConfig1.Server},database={appConfig1.DataBase},uid ={appConfig1.UserId},pwd ={appConfig1.PassWord}";
             Console.WriteLine(connectionString);
 
-            AppConfigStatic appConfig2 = AppConfigStatic.GetInstance();
+            AppConfig appConfig2 = AppConfig.GetInstance();
 
             Console.WriteLine(object.ReferenceEquals(appConfig1, appConfig2));//print:true。即系统中的appConfig对象是同一个
 
@@ -37,10 +37,10 @@ namespace _03单例模式_读取配置文件
         private static void CreateAppConfig2()
         {
 
-            AppConfigStatic appConfig1 = null;
-            AppConfigStatic appConfig2 = null;
-            Action createA = () => appConfig1 = AppConfigStatic.GetInstance();
-            Action createB = () => appConfig2 = AppConfigStatic.GetInstance();
+            AppConfig appConfig1 = null;
+            AppConfig appConfig2 = null;
+            Action createA = () => appConfig1 = AppConfig.GetInstance();
+            Action createB = () => appConfig2 = AppConfig.GetInstance();
             Parallel.Invoke(createA, createB);
 
             Console.WriteLine(object.ReferenceEquals(appConfig1, appConfig2));
@@ -57,6 +57,20 @@ namespace _03单例模式_读取配置文件
             AppConfigWithLock appConfig2 = null;
             Action createA = () => appConfig1 = AppConfigWithLock.GetInstance();
             Action createB = () => appConfig2 = AppConfigWithLock.GetInstance();
+            Parallel.Invoke(createA, createB);
+
+            Console.WriteLine(object.ReferenceEquals(appConfig1, appConfig2));
+
+            Console.ReadKey();
+        }
+
+        //饿汉模式
+        private static void CreateAppConfigStatic()
+        {
+            AppConfig2 appConfig1 = null;
+            AppConfig2 appConfig2 = null;
+            Action createA = () => appConfig1 = AppConfig2.GetInstance();
+            Action createB = () => appConfig2 = AppConfig2.GetInstance();
             Parallel.Invoke(createA, createB);
 
             Console.WriteLine(object.ReferenceEquals(appConfig1, appConfig2));

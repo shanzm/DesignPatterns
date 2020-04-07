@@ -9,7 +9,7 @@ namespace _03单例模式_读取配置文件
 {
     public class AppConfig
     {
-        //定义字段，用于存储唯一实例
+        //定义字段，用于存储唯一实例。注意是静态的
         private static AppConfig appConfig = null;
 
         //对应配置文件设置相应的属性，注意是只读的
@@ -27,7 +27,7 @@ namespace _03单例模式_读取配置文件
             PassWord = ConfigurationManager.AppSettings["pwd"];
         }
 
-        //获取唯一实例
+        //获取唯一实例。注意是静态的
         public static AppConfig GetInstance()
         {
             if (appConfig == null)
