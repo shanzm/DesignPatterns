@@ -13,7 +13,7 @@ namespace _03单例模式_读取配置文件
         static void Main(string[] args)
         {
             //单线程创建单例对象
-            //CreateAppConfig();
+            CreateAppConfig();
             //多线程创建单例对象
             //CreateAppConfig2();
             //对创建对象操作加锁
@@ -23,7 +23,7 @@ namespace _03单例模式_读取配置文件
             //内部静态类
             //CreateAppConfigInnerClass();
             //单例模式扩展
-            CreateAppConfigExtend();
+            //CreateAppConfigExtend();
         }
 
         //单线程
