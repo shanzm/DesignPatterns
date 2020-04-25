@@ -47,9 +47,9 @@
     <Compile Include="Factory\IDatabaseFactory.cs" />
     <Compile Include="Factory\MSSQLFactory.cs" />
     <Compile Include="Factory\OracleFactory.cs" />
-    <Compile Include="DelService\IDepartmentService.cs" />
-    <Compile Include="DelService\MSSQLDepService.cs" />
-    <Compile Include="DelService\OracleDepService.cs" />
+    <Compile Include="DepService\IDepartmentService.cs" />
+    <Compile Include="DepService\MSSQLDepService.cs" />
+    <Compile Include="DepService\OracleDepService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserService\MSSQLUserService.cs" />

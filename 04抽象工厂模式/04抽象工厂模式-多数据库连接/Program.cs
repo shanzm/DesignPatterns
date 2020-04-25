@@ -31,33 +31,21 @@ namespace _04抽象工厂模式_多数据库连接
             User user = new User() { Id = 0001, Name = "shanzm" };
             Department dep = new Department() { Id = 1000, Name = "Development" };
 
-
-            IDatabaseFactory msSQlFactory = new MSSQLFactory();
-            IDatabaseFactory oracleFactory = new OracleFactory();
+            //假如需要改换数据库，则你只需要将new MSSQLFactory()修改为new OracleFactory(),其他的代码无需修改
+            IDatabaseFactory DatabaseFactory = new OracleFactory();
 
             //若是对MSSQL数据库中的User表操作
-            IUserService msUserService = msSQlFactory.CreateUserService();
-            msUserService.Insert(user);
-            msUserService.GetUser(00001);//print:查询到用户,Id:00001
-
-
-            //若是对Oracle数据库中User表操作
-            IUserService oracleUserService = oracleFactory.CreateUserService();
-            oracleUserService.Insert(user);
-            oracleUserService.GetUser(00001);
+            IUserService UserService = DatabaseFactory.CreateUserService();
+            UserService.Insert(user);
+            UserService.GetUser(00001);//print:查询到用户,Id:00001
 
 
             //若是对MSSQL数据库中的Del表操作
-            IDepartmentService msDepService = msSQlFactory.CreateDepService();
-            msDepService.Insert(dep);
-            msDepService.GetDepartment(1000);
-
-
-            //若是对Oracle数据库中的Del表操作
-            IDepartmentService oracleDepService = oracleFactory.CreateDepService();
-            oracleDepService.Insert(dep);
-            oracleDepService.GetDepartment(1000);
+            IDepartmentService DepService = DatabaseFactory.CreateDepService();
+            DepService.Insert(dep);
+            DepService.GetDepartment(1000);
             Console.ReadKey();
+
         }
     }
 }
