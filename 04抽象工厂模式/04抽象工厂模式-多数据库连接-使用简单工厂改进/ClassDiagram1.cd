@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_04抽象工厂模式_多数据库连接_使用简单工厂改进.DatabaseFactory">
+    <Position X="6" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAABAAAAAgAAAAAA=</HashCode>
+      <FileName>DatabaseFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_04抽象工厂模式_多数据库连接_使用简单工厂改进.MSSQLDepService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>DepService\MSSQLDepService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_04抽象工厂模式_多数据库连接_使用简单工厂改进.OracleDepService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>DepService\OracleDepService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_04抽象工厂模式_多数据库连接_使用简单工厂改进.Program" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_04抽象工厂模式_多数据库连接_使用简单工厂改进.MSSQLUserService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>UserService\MSSQLUserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_04抽象工厂模式_多数据库连接_使用简单工厂改进.OracleUserService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>UserService\OracleUserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="_04抽象工厂模式_多数据库连接_使用简单工厂改进.IDepartmentService" Collapsed="true">
+    <Position X="8.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>DepService\IDepartmentService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_04抽象工厂模式_多数据库连接_使用简单工厂改进.IUserService" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>UserService\IUserService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>
