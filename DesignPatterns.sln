@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01简单工厂模式", "01简单工厂模式", "{CD1E3779-F9A3-41A5-853C-D98ED92BC47B}"
 EndProject
@@ -34,6 +34,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04抽象工厂模式-多数据库连接-使用简单工厂改进", "04抽象工厂模式\04抽象工厂模式-多数据库连接-使用简单工厂改进\04抽象工厂模式-多数据库连接-使用简单工厂改进.csproj", "{6F9760D4-5007-4573-904A-2B93B9B5E4A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04抽象工厂模式-多数据库连接-反射+简单工厂", "04抽象工厂模式\04抽象工厂模式-多数据库连接-反射+简单工厂\04抽象工厂模式-多数据库连接-反射+简单工厂.csproj", "{75AEB438-53D4-4181-B9A1-FB412708767E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05建造者模式", "05建造者模式", "{B6C38778-5D46-4B7F-89E9-48AE96059591}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "责任链模式", "责任链模式", "{3EE1C4E2-9E65-4E67-8E20-7CB324E898B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01请假条审批模块", "责任链模式\01请假条审批模块\01请假条审批模块.csproj", "{52655307-1569-4098-AD03-9C5FF3F84248}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +95,10 @@ Global
 		{75AEB438-53D4-4181-B9A1-FB412708767E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75AEB438-53D4-4181-B9A1-FB412708767E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75AEB438-53D4-4181-B9A1-FB412708767E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52655307-1569-4098-AD03-9C5FF3F84248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52655307-1569-4098-AD03-9C5FF3F84248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52655307-1569-4098-AD03-9C5FF3F84248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52655307-1569-4098-AD03-9C5FF3F84248}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,5 +116,9 @@ Global
 		{9BF3B3A8-9F60-489D-A868-0B58688C2D35} = {8ACF1A05-05D6-48BB-A707-E02BF7C02FEC}
 		{6F9760D4-5007-4573-904A-2B93B9B5E4A3} = {8ACF1A05-05D6-48BB-A707-E02BF7C02FEC}
 		{75AEB438-53D4-4181-B9A1-FB412708767E} = {8ACF1A05-05D6-48BB-A707-E02BF7C02FEC}
+		{52655307-1569-4098-AD03-9C5FF3F84248} = {3EE1C4E2-9E65-4E67-8E20-7CB324E898B3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80D33124-025D-4874-B962-0466E752844D}
 	EndGlobalSection
 EndGlobal
