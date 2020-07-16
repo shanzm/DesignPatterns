@@ -41,6 +41,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "责任链模式", "责任�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01请假条审批模块", "责任链模式\01请假条审批模块\01请假条审批模块.csproj", "{52655307-1569-4098-AD03-9C5FF3F84248}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01使用不同数据库的模版方法", "模版方法模式\01使用不同数据库的模版方法\01使用不同数据库的模版方法.csproj", "{6EE85D36-97EC-458B-A916-F7F6A9D0C030}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "模版方法模式", "模版方法模式", "{31CBE282-6E0F-4225-90EF-D5502BAA66AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00父类调用子类中覆盖的方法", "模版方法模式\00父类调用子类中覆盖的方法\00父类调用子类中覆盖的方法.csproj", "{15AC593D-1081-46AE-9660-A92EB48CEAB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +105,14 @@ Global
 		{52655307-1569-4098-AD03-9C5FF3F84248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52655307-1569-4098-AD03-9C5FF3F84248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52655307-1569-4098-AD03-9C5FF3F84248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE85D36-97EC-458B-A916-F7F6A9D0C030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE85D36-97EC-458B-A916-F7F6A9D0C030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE85D36-97EC-458B-A916-F7F6A9D0C030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE85D36-97EC-458B-A916-F7F6A9D0C030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15AC593D-1081-46AE-9660-A92EB48CEAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15AC593D-1081-46AE-9660-A92EB48CEAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15AC593D-1081-46AE-9660-A92EB48CEAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15AC593D-1081-46AE-9660-A92EB48CEAB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +131,8 @@ Global
 		{6F9760D4-5007-4573-904A-2B93B9B5E4A3} = {8ACF1A05-05D6-48BB-A707-E02BF7C02FEC}
 		{75AEB438-53D4-4181-B9A1-FB412708767E} = {8ACF1A05-05D6-48BB-A707-E02BF7C02FEC}
 		{52655307-1569-4098-AD03-9C5FF3F84248} = {3EE1C4E2-9E65-4E67-8E20-7CB324E898B3}
+		{6EE85D36-97EC-458B-A916-F7F6A9D0C030} = {31CBE282-6E0F-4225-90EF-D5502BAA66AA}
+		{15AC593D-1081-46AE-9660-A92EB48CEAB5} = {31CBE282-6E0F-4225-90EF-D5502BAA66AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {80D33124-025D-4874-B962-0466E752844D}

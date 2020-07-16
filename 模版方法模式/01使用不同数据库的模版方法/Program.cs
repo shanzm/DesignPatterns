@@ -14,7 +14,10 @@ namespace _01使用不同数据库的模版方法
             DBOperator oracleDBOperator = new OracleDBOperator();
 
             sqlServerDBOperator.Process();
+            Console.WriteLine("---------------------------");
             oracleDBOperator.Process();
+
+            ((OracleDBOperator)oracleDBOperator).Process();
 
             Console.ReadKey();
         }
@@ -94,5 +97,23 @@ namespace _01使用不同数据库的模版方法
         {
             Console.WriteLine("连接Oracle数据库");
         }
+
+        //按照面向对象的思想，我们可以在子类中使用new 关键字覆盖父类中的方法
+        //注意：
+        //1. 这里覆盖了UseDB(),是不够的，还要覆盖调用这个方法的方法Process()
+        //2. 在这里我们
+        public new void UseDB()
+        {
+            Console.WriteLine("使用Oracle数据库");
+        }
+
+        public new void Process()
+        {
+            ConnDB();
+            OpenDB();
+            UseDB();
+            CloseDB();
+        }
+
     }
 }
