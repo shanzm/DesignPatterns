@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _01使用不同数据库的模版方法
 {
@@ -15,7 +11,9 @@ namespace _01使用不同数据库的模版方法
 
             sqlServerDBOperator.Process();
             Console.WriteLine("---------------------------");
+
             oracleDBOperator.Process();
+            Console.WriteLine("---------------------------");
 
             ((OracleDBOperator)oracleDBOperator).Process();
 
@@ -100,8 +98,8 @@ namespace _01使用不同数据库的模版方法
 
         //按照面向对象的思想，我们可以在子类中使用new 关键字覆盖父类中的方法
         //注意：
-        //1. 这里覆盖了UseDB(),是不够的，还要覆盖调用这个方法的方法Process()
-        //2. 在这里我们
+        //1. 这里覆盖了UseDB(),是不够的,还要覆盖调用这个方法的方法Process()
+        //2. 若是父类引用指向子类对象，则需要将父类转化为子类对象才可以使用子类中覆盖的方法
         public new void UseDB()
         {
             Console.WriteLine("使用Oracle数据库");
