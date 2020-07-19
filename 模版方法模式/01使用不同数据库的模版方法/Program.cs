@@ -9,13 +9,14 @@ namespace _01使用不同数据库的模版方法
             DBOperator sqlServerDBOperator = new SQLServerDBOperator();
             DBOperator oracleDBOperator = new OracleDBOperator();
 
-            sqlServerDBOperator.Process();
+            sqlServerDBOperator.Process();//注意这里，我们定义的钩子方法是虚方法，通过重写，实现子类控制父类，这里是不需要将强转为子类对象
             Console.WriteLine("---------------------------");
 
             oracleDBOperator.Process();
             Console.WriteLine("---------------------------");
 
-            ((OracleDBOperator)oracleDBOperator).Process();
+            ((OracleDBOperator)oracleDBOperator).Process(); //这里是通过覆盖父类中的方法，所以需要将父类强转为相应的子类对象
+            Console.WriteLine("---------------------------");
 
             Console.ReadKey();
         }
@@ -64,31 +65,29 @@ namespace _01使用不同数据库的模版方法
             Console.WriteLine("关闭数据库");
         }
 
+        //钩子方法：用于子类反向控制父类中某个方法是否执行
+        //注意钩子方法这里定义为虚方法，虚方法和抽象方法不同的地方就是虚方法有方法体，这样我们就可以在虚方法中定义默认的方法
+        public virtual bool IsStart()
+        {
+            return true;//默认为true所以在具体子类中重写
+        }
+
         //模版方法：定义算法骨架
         //确定其他基本方法的执行顺序
         public void Process()
         {
             ConnDB();
             OpenDB();
-            UseDB();
+            if (IsStart())
+            {
+                UseDB();
+            }
             CloseDB();
         }
 
     }
 
     //具体子类1
-    public class SQLServerDBOperator : DBOperator
-    {
-        ///具体子类继承抽象父类，重写抽象父类中的抽象方法
-        ///抽象父类中的非抽象方法就是每个子类都通用的方法，
-        public override void ConnDB()
-        {
-            Console.WriteLine("连接SQL Server数据库");
-        }
-
-    }
-
-    //具体子类2
     public class OracleDBOperator : DBOperator
     {
         public override void ConnDB()
@@ -109,9 +108,42 @@ namespace _01使用不同数据库的模版方法
         {
             ConnDB();
             OpenDB();
-            UseDB();
+            if (IsStart())
+            {
+                UseDB();
+            }
+
             CloseDB();
         }
+    }
 
+    //具体子类2
+    public class SQLServerDBOperator : DBOperator
+    {
+        ///具体子类继承抽象父类，重写抽象父类中的抽象方法
+        ///抽象父类中的非抽象方法就是每个子类都通用的方法，
+        public override void ConnDB()
+        {
+            Console.WriteLine("连接SQL Server数据库");
+        }
+
+        public override bool IsStart()//覆盖了钩子函数，修改了抽象父类中模版方法，实现子类反向控制父类
+        {
+            return false;
+        }
+
+      
     }
 }
+
+
+///补充一点语法：
+///抽象类中可以有非抽象方法，抽象方法只能在抽象类中
+///非静态类可以包含静态方法，但静态类不能包含非静态方法。
+///换言之：静态类只能有静态方法，静态方法不仅可以在静态类中也可以在非静态方法中
+///
+
+///虚方法（virtual）和抽象方法（abstract）都可以被重写（override）
+///虚方法（virtual)有方法实体，抽象方法(abstract)没有方法实体【类似接口】
+///虚方法（virtual)在派生类中可以不重写，抽象方法(abstract)派生类中必须重写【类似接口】
+///抽象方法(abstract)必须声明在抽象类中
